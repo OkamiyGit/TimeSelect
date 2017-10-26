@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="6dp"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/rb_go_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton_background_select_in"
+                android:button="@null"
+                android:checked="true"
+                android:paddingBottom="8dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="8dp"
+                android:text="入场"
+                android:textColor="@color/radiobutton_text_select"
+                android:textSize="16sp"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_go_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton_background_select_out"
+                android:button="@null"
+                android:paddingBottom="8dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="8dp"
+                android:text="出场"
+                android:textColor="@color/radiobutton_text_select"
+                android:textSize="16sp"
+                />
+
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="6dp"
+            android:text="下一步"
+            android:textColor="@color/orange"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/gray_line_main"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/relative_layout"
+        android:background="#44cccccc"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gray_line_main"
+        android:orientation="horizontal">
+
+        <com.test.okamiy.timeselect.CustomNumberPicker
+            android:id="@+id/datepicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"/>
+
+        <com.test.okamiy.timeselect.CustomNumberPicker
+            android:id="@+id/hourpicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"/>
+
+        <com.test.okamiy.timeselect.CustomNumberPicker
+            android:id="@+id/minuteicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"/>
+    </LinearLayout>
+
+</RelativeLayout>
